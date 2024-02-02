@@ -3,11 +3,13 @@ const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 const root = document.documentElement;
 
+
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
   updateColors();
   updateIcon();
 });
+
 
 function updateColors() {
   if (body.classList.contains('dark-mode')) {
@@ -29,6 +31,7 @@ function updateColors() {
   }
 }
 
+
 function updateIcon() {
   if (body.classList.contains('dark-mode')) {
     themeIcon.classList.remove('bi-moon-stars-fill');
@@ -39,13 +42,18 @@ function updateIcon() {
   }
 }
 
+
 updateColors();
 updateIcon();
 
 
 
+
+
+
 (function() {
   "use strict";
+
 
   /**
    * Easy selector helper function
@@ -58,6 +66,7 @@ updateIcon();
       return document.querySelector(el)
     }
   }
+
 
   /**
    * Easy event listener function
@@ -73,12 +82,14 @@ updateIcon();
     }
   }
 
+
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
+
 
   /**
    * Navbar links active state on scroll
@@ -100,6 +111,7 @@ updateIcon();
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
+
   /**
    * Scrolls to an element with header offset
    */
@@ -110,6 +122,7 @@ updateIcon();
       behavior: 'smooth'
     })
   }
+
 
   /**
    * Back to top button
@@ -127,6 +140,7 @@ updateIcon();
     onscroll(document, toggleBacktotop)
   }
 
+
   /**
    * Mobile nav toggle
    */
@@ -136,12 +150,14 @@ updateIcon();
     this.classList.toggle('bi-x')
   })
 
+
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault()
+
 
       let body = select('body')
       if (body.classList.contains('mobile-nav-active')) {
@@ -153,6 +169,7 @@ updateIcon();
       scrollto(this.hash)
     }
   }, true)
+
 
   /**
    * Scroll with ofset on page load with hash links in the url
@@ -166,15 +183,19 @@ updateIcon();
   });
 
 
+
+
 /**
  * Preloader
  */
 let preloader = select('#preloader');
 
+
 if (preloader) {
   window.addEventListener('load', () => {
     // Adicione uma classe ao corpo para ocultar a barra de rolagem
     document.body.classList.add('preloader-active');
+
 
     // Simule um atraso de 3 segundos antes de remover o preloader
     setTimeout(() => {
@@ -185,6 +206,8 @@ if (preloader) {
     }, 550);
   });
 }
+
+
 
 
   /**
@@ -203,6 +226,7 @@ if (preloader) {
     });
   }
 
+
   /**
    * Skills animation
    */
@@ -220,6 +244,7 @@ if (preloader) {
     })
   }
 
+
   /**
    * Porfolio isotope and filter
    */
@@ -230,7 +255,9 @@ if (preloader) {
         itemSelector: '.portfolio-item'
       });
 
+
       let portfolioFilters = select('#portfolio-flters li', true);
+
 
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
@@ -238,6 +265,7 @@ if (preloader) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
+
 
         portfolioIsotope.arrange({
           filter: this.getAttribute('data-filter')
@@ -248,23 +276,27 @@ if (preloader) {
       }, true);
     }
 
+
   });
 
+
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
   });
 
+
   /**
-   * Initiate portfolio details lightbox 
+   * Initiate portfolio details lightbox
    */
   const portfolioDetailsLightbox = GLightbox({
     selector: '.portfolio-details-lightbox',
     width: '90%',
     height: '90vh'
   });
+
 
   /**
    * Portfolio details slider
@@ -283,6 +315,7 @@ if (preloader) {
     }
   });
 
+
   /**
    * Animation on scroll
    */
@@ -295,22 +328,30 @@ if (preloader) {
     })
   });
 
+
   /**
-   * Initiate Pure Counter 
+   * Initiate Pure Counter
    */
   new PureCounter();
 
+
 })()
+
+
+
 
 
 
 /*Form*/
 const isPageReloaded = sessionStorage.getItem('formSubmitted');
 
+
 function handleFormSubmission(event) {
-  event.preventDefault(); 
+  event.preventDefault();
+
 
   const form = event.target;
+
 
   fetch(form.action, {
     method: form.method,
@@ -326,10 +367,12 @@ function handleFormSubmission(event) {
       showSentMessage();
       clearForm();
 
+
       sessionStorage.setItem('formSubmitted', 'true');
 
+
       history.replaceState({}, document.title, window.location.pathname);
-      
+     
       setTimeout(() => {
         hideSentMessage();
       }, 10000);
@@ -342,15 +385,18 @@ function handleFormSubmission(event) {
   });
 }
 
+
 window.addEventListener('load', function () {
   sessionStorage.removeItem('formSubmitted');
 });
+
 
 if (isPageReloaded) {
   window.addEventListener('beforeunload', function () {
     sessionStorage.removeItem('formSubmitted');
   });
 }
+
 
 function showSentMessage() {
   console.log('Showing sent message');
@@ -359,10 +405,12 @@ function showSentMessage() {
   document.querySelector('.error-message').style.display = 'none';
 }
 
+
 function hideSentMessage() {
   console.log('Hiding sent message');
   document.querySelector('.sent-message').style.display = 'none';
 }
+
 
   function showErrorMessage(errorMessage) {
     console.log('Showing error message:', errorMessage);
@@ -372,6 +420,7 @@ function hideSentMessage() {
     document.querySelector('.error-message').style.display = 'block';
   }
 
+
   function clearForm() {
     setTimeout(function() {
       document.getElementById("name").value = "";
@@ -380,3 +429,33 @@ function hideSentMessage() {
       document.getElementById("message").value = ""; // Corrigido o seletor para o id "message"
     }, 500);
   }
+
+
+
+
+  /* certificate */
+  const accordionBtns = document.querySelectorAll(".item__header");
+
+
+accordionBtns.forEach((accordion) => {
+  accordion.onclick = function () {
+    this.classList.toggle("active");
+
+
+    let content = this.nextElementSibling;
+    console.log(content);
+
+
+    if (content.style.maxHeight) {
+      //this is if the accordion is open
+      content.style.maxHeight = null;
+    } else {
+      //if the accordion is currently closed
+      content.style.maxHeight = content.scrollHeight + "px";
+      console.log(content.style.maxHeight);
+    }
+  };
+});
+
+
+
