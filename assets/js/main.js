@@ -20,6 +20,8 @@ function updateColors() {
     root.style.setProperty('--textcolorgreen', '#B4D54D');
     root.style.setProperty('--textcolorpink', '#FF5084');
     root.style.setProperty('--colorhover', '#1E1D1D');
+    root.style.setProperty('--colordescription', '#b5b5b5');
+    root.style.setProperty('--datecolor', '#fffdfdc7');
   } else {
     root.style.setProperty('--background', '#ECECEC');
     root.style.setProperty('--textcolor1', '#2E2D2D');
@@ -28,6 +30,8 @@ function updateColors() {
     root.style.setProperty('--textcolorgreen', '#B4D54D');
     root.style.setProperty('--textcolorpink', '#F36870');
     root.style.setProperty('--colorhover', '#1E1D1D');
+    root.style.setProperty('--colordescription', '#9a9a9a');
+    root.style.setProperty('--datecolor', '#000000a6');
   }
 }
 

@@ -7,6 +7,8 @@
   --textcolorgreen:#B4D54D;
   --textcolorpink:#F36870;
   --colorhover: #030303;
+  --colordescription: #9a9a9a;
+  --datecolor: #000000a6;
   --transicao: background-color 0.5s, color 0.5s;
   --textfont1: 'Lora', serif; 
   --textfont2: 'Raleway', sans-serif;
@@ -604,7 +606,7 @@ a:hover {
   border-radius: 100%;
   margin-right: 15px;
   display: none;
-  border: 2px solid var(--textcolor1); 
+  /*border: 2px solid var(--textcolor1); */
 }
 
 
@@ -678,6 +680,12 @@ a:hover {
   text-align: justify;
 }
 
+.cv-section__description_text{
+  font-family: var(--textfont2)!important;
+  font-size: 16px;
+  color: var(--colordescription);
+}
+
 
 .cv-section__role {
   font-weight: 600;
@@ -685,7 +693,7 @@ a:hover {
 
 
 .cv-section__period {
-  color: #ababab;
+  color: var(--datecolor);
 }
 
 .col-md-4{
@@ -726,7 +734,8 @@ a:hover {
 }
 
 .downloadcv{
-  font-size: 20px;
+  font-family: var(--textfont2);
+  font-size: 17px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
