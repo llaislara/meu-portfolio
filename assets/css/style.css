@@ -1,6 +1,6 @@
 /* Cores para o light-mode */
 :root {
-  --background: #ECECEC;
+  --background: #f5f5f5;
   --textcolor1: #2E2D2D;
   --textcolorpurple: #52b77c;
   --textcolorblue:#6988E2;
@@ -10,9 +10,8 @@
   --colordescription: #9a9a9a;
   --datecolor: #000000a6;
   --transicao: background-color 0.5s, color 0.5s;
-  --textfont1: 'Lora', serif; 
-  --textfont2: 'Raleway', sans-serif;
-  --textfont3: 'Gruppo', serif;
+  --textfont1: "Schibsted Grotesk", sans-serif; 
+  --textfont2: "Roboto Flex", sans-serif;
 }
 
 
@@ -602,6 +601,7 @@ a:hover {
 }
 
 .cv-header__img {
+  box-shadow: 0px 0px 3px 4px rgb(0 0 0 / 6%);
   width: 30%;
   border-radius: 100%;
   margin-right: 15px;
@@ -701,9 +701,9 @@ a:hover {
   width: 33.33333333%;
 }
 
-.cv-sidebar-section {
+/*.cv-sidebar-section {
   margin-bottom: 20px;
-}
+}*/
 
 
 .cv-sidebar-section__title {
@@ -746,6 +746,7 @@ a:hover {
 
 
 .tag {
+  font-family: var(--textfont2);
   background-color: var(--textcolor1);
   color: var(--background);
   padding: 8px 12px;
