@@ -1321,7 +1321,12 @@ ul.contact-info li {
   padding: 0 30px 0px 0;
   color: var(--textcolor1);
 }
-
+.contact-info h1{
+  font-family: var(--textfont1);
+}
+.contact-info p, h4{
+  font-family: var(--textfont2);
+}
 /* ... (outros estilos comuns) */
 
 /* Estilos específicos para dispositivos móveis */
@@ -1340,6 +1345,7 @@ ul.contact-info li {
   }
 
   .contact-info h1 {
+    font-family: var(--textfont1)!important;
     text-align: center;
     font-size: 20px;
   }
