@@ -83,8 +83,8 @@
     </button>
     <div class="dropdown-menu" aria-labelledby="languageDropdown">
       <a class="dropdown-item" href="index.html">PT</a>
-      <a class="dropdown-item" href="indexEN.html">EN</a>
-      <a class="dropdown-item" href="indexES.html">ES</a>
+      <a class="dropdown-item" href="languages/indexEN.html">EN</a>
+      <a class="dropdown-item" href="languages/indexES.html">ES</a>
     </div>
   </div>
 
@@ -461,7 +461,7 @@
 
 
   <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio section-bg">
+  <section id="portfolio" class="portfolio section-bg" style="min-height: 1350px !important;">
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
@@ -471,19 +471,20 @@
         </p>
       </div>
 
-      <div class="row">
+
+      <!-- <div class="row">
         <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">Todos</li>
             <li data-filter=".filter-front">Front-end</li>
             <li data-filter=".filter-back">Backend</li>
-           <li data-filter=".filter-logic">Lógica & Algoritmos</li> 
+            <li data-filter=".filter-logic">Lógica & Algoritmos</li> 
             <li data-filter=".filter-designs">Design</li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200" >
         <!-- FRONT END -->
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-front">
@@ -515,18 +516,6 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-front">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/WheelsColPoster.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Hot Wheels Collection</h4>
-              <p>Página Web fictícia para venda e troca de carrinhos Hot Wheels</p>
-              <div class="portfolio-links">
-                <a href="https://github.com/llaislara/Site-Ficticio-Vendas-Carros-Colecionaveis" ><i class="bi bi-github" style="margin-left: 10px;"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-front">
           <div class="portfolio-wrap">
@@ -542,19 +531,6 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-front">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/candiePoster.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Candie</h4>
-              <p> Página inicial de uma confeitaria fictícia.</p>
-              <div class="portfolio-links">
-                <a href="https://codepen.io/La-s-Lara/details/YzBMKev"><i class="bi bi-eye-fill"></i></a>
-                <a href="https://github.com/llaislara/Candie" ><i class="bi bi-github"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-front">
           <div class="portfolio-wrap">
@@ -619,29 +595,10 @@
           </div>
         </div>
         
-         <!-- Algoritmos e Lógica -->
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-logic">
-            
-        </div>
-
-        <!-- DESIGNS -->
-        <div class="col-lg-4 col-md-6 portfolio-item filter-designs">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/designs/Zara/redesignZara.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Redesign Zara APP </h4>
-              <div class="portfolio-links">
-                <!-- Adicione o caminho para a imagem desejada no atributo href -->
-                <a href="assets/img/portfolio/designs/Zara/login.png" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bi bi-eye-fill" style="margin-left: 50px;"></i></a>
-                <a href="assets/img/portfolio/designs/Zara/welcome.png" data-gallery="portfolioGallery" class="portfolio-lightbox"></a>
-                <a href="assets/img/portfolio/designs/Zara/menu2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" ></a>
-                <a href="assets/img/portfolio/designs/Zara/shirts.png" data-gallery="portfolioGallery" class="portfolio-lightbox" ></a>
-                <a href="assets/img/portfolio/designs/Zara/menu.png" data-gallery="portfolioGallery" class="portfolio-lightbox" ></a>
-                <a href="assets/img/portfolio/designs/Zara/products.png" data-gallery="portfolioGallery" class="portfolio-lightbox"></a>
-                <a href="assets/img/portfolio/designs/Zara/shoes.png" data-gallery="portfolioGallery" class="portfolio-lightbox"></a>
-              </div>
-            </div>
+        <div class="col-lg-4 col-md-6 portfolio-item filter-back">
+          <div class="moreprojects"> 
+            <button class="tagportfolio" onclick="window.location.href='projects/more_projects.html'">Ver mais</button>
           </div>
         </div>
       </div>
