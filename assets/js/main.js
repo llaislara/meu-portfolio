@@ -98,12 +98,12 @@ updateIcon();
   /**
    * Navbar links active state on scroll
    */
-  let navbarlinks = select('#navbar .scrollto', true)
+  let navbarlinks = document.querySelectorAll('#navbar .scrollto')
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
+      let section = document.querySelector(navbarlink.hash)
       if (!section) return
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
@@ -113,8 +113,7 @@ updateIcon();
     })
   }
   window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
-
+  window.addEventListener('scroll', navbarlinksActive)
 
   /**
    * Scrolls to an element with header offset

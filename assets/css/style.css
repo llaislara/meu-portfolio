@@ -745,13 +745,18 @@ a:hover {
 }
 
 
-.tag {
+.tag {  
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: var(--textfont2);
-  background-color: var(--textcolor1);
-  color: var(--background);
+  color: var(--textcolor1);
+  background: rgb(255 255 255 / 25%);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
   padding: 8px 12px;
-  border-radius: 15px;
-  cursor: pointer;
+  border-radius: 13px;
   transition: transform 0.3s ease;
 }
 
@@ -772,7 +777,7 @@ a:hover {
   padding: 2rem;
   background: #fff;
   box-shadow: 0px 9px 10px rgba(0,0,0,0.05);
-  border-radius: 6px;
+  border-radius: 13px;
   font-family: var(--textfont2);
   color: #2E2D2D;
 }
@@ -955,6 +960,10 @@ a:hover {
 }
 
 .portfolio #portfolio-flters li {
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(5px);
+  border-radius: 13px;
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px;
@@ -1117,6 +1126,33 @@ a:hover {
   display: inline-block; 
 }
 
+/*--------------------------------------------------------------
+# Portfolio Button
+--------------------------------------------------------------*/
+.moreprojects{ 
+  display: flex;
+  justify-content: center;
+  /*margin-top: 4%;*/
+}
+
+.tagportfolio {
+  font-family: var(--textfont2);
+  color: var(--textcolor1);
+  padding: 8px 12px;
+  border-radius: 13px;
+  width: 100%;
+  min-height: 14em;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(5px);
+  border: none;
+}
+
+
+.tagportfolio:hover {
+  transform: scale(1.1);
+}
 
 
 /*--------------------------------------------------------------
@@ -1313,7 +1349,7 @@ ul.contact-info li {
   background-position: left;
   z-index: 0;
   padding: 0;
-  min-height: auto;
+  min-height: 1920px;
   overflow: hidden;
 }
 
